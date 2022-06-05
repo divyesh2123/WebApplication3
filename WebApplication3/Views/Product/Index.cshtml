@@ -1,0 +1,31 @@
+﻿@model List<WebApplication3.Models.ProductViewModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table>
+
+    <tr>
+        <td>Name</td>
+        <td>Unit In Price</td>
+        <td>Unit In Stock</td>
+    </tr>
+
+
+    @foreach (var r in Model)
+    {
+<tr>
+    <td>@r.ProductName</td>
+    <td>@r.UnitPrice</td>
+    <td>@r.Stock</td>
+
+</tr>
+
+
+
+    }
+
+</table>

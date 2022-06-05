@@ -1,0 +1,74 @@
+﻿@model WebApplication3.Models.AddProductViewModel
+@{
+    ViewBag.Title = "CreateProduct";
+
+}
+
+<h2>CreateProduct</h2>
+
+
+@using (Html.BeginForm("CreateProduct", "Product", FormMethod.Post))
+{
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.ProductName)
+        @Html.TextBoxFor(y => y.ProductName, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.SupplierID)
+        @Html.DropDownListFor(y => y.SupplierID, Model.selectListItemsDataSupplier, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.CategoryID)
+        @Html.DropDownListFor(y => y.CategoryID, Model.selectListItemsDataCatrgory, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.QuantiyPerUnit)
+        @Html.TextBoxFor(y => y.QuantiyPerUnit, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.UnitPrice)
+        @Html.TextBoxFor(y => y.UnitPrice, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.UnitInStock)
+        @Html.TextBoxFor(y => y.UnitInStock, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.UnitOnOrder)
+        @Html.TextBoxFor(y => y.UnitOnOrder, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.ReoderLevel)
+        @Html.TextBoxFor(y => y.ReoderLevel, new { @class = "form-control" })
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(y => y.DisContinue)
+        @Html.CheckBoxFor(y => y.DisContinue, new { @class = "form-control" })
+
+    </div>
+
+
+
+    <input type="submit" value="Save" />
+
+
+
+
+}
